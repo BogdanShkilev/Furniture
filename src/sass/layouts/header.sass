@@ -1,0 +1,132 @@
+.desktop-main-nav
+	ol
+		-moz-column-count: 2
+		-webkit-column-count: 2
+		column-count: 2
+		list-style-type: decimal
+.header-top
+	background: $project-main-color
+	border-bottom: 1px solid darken($project-main-color, 7%)
+	.row
+		line-height: 0
+
+		.small-12
+			line-height: 0
+.top-add-info-show
+	display: inline-block
+	height: $vertical-gutter * 2.5
+	width: 100%
+	background: url(../images/dotes.png) no-repeat center center
+	cursor: pointer
+	opacity: 1
+	max-height: rem-calc(20)
+	transition-property: max-height, opacity
+	transition-duration: 0.9s
+	pointer-events: auto;
+.top-add-info
+	overflow: hidden
+	height: 0
+	opacity: 0
+	max-height: 20px
+	overflow: hidden
+	transition-property: max-height, opacity
+	transition-duration: 1s
+
+	a
+		color: $second-project-text-color
+
+		&:hover
+			color: $second-project-text-color-hover
+.lang
+	li
+		position: relative
+		float: left
+		font-weight: 700
+		font-size: rem-calc(12)
+		letter-spacing: rem-calc(1)
+		padding: $vertical-gutter * 1.2 0
+
+		&:after
+			display: block
+			position: absolute
+			left: 105%
+			top: 0
+			width: rem-calc(9)
+			height: 100%
+			background: url(../images/arrow-right.png) no-repeat 0 center
+			content: ''
+		&:last-child:after
+			display: none
+		&:first-child:after
+			display: block
+.top-add-info-list
+	float: right
+	padding: $vertical-gutter * 1.2 0
+
+	li
+		position: relative
+		float: right
+		margin-right: rem-calc(10)
+		font-size: rem-calc(12)
+
+		&:after
+			float: right
+			margin-left: rem-calc(10)
+			color: $second-project-text-color
+			content: '-'
+		&:first-child:after
+			display: none
+		&:last-child:after
+			display: block
+		&:first-child
+			margin-right: 0
+ol
+	display: none
+.header-nav
+	padding: $vertical-gutter * 2.5 0
+	background: linear-gradient(to top, #fefefe, #fbfbfb)
+.logo
+	display: block
+	font-size: rem-calc(20)
+	font-weight: 700
+	font-family: Arial, 'Lato'
+	color: $second-project-text-color-hover
+
+	&:hover
+		color: $second-project-text-color-hover
+
+.nav-toggle-button
+	@include breakpoint(large up)
+		display: none
+
+.desktop-main-nav
+	li
+		float: left
+		margin-right: rem-calc(35)
+		font-size: rem-calc(16)
+		font-family: Arial, 'Lato'
+		font-weight: 700
+		
+		a
+			color: $project-text-color
+
+			&:hover
+				color: darken($project-text-color, 15%)
+	@media only screen and (max-width: 64.063em)
+		display: none
+.header-cart
+	display: inline-block
+	overflow: hidden
+	padding: $vertical-gutter rem-calc(15) $vertical-gutter rem-calc(55)
+	border: 2px solid $project-text-color
+	border-radius: rem-calc(40)
+	background: url(../images/cart-icon.png) no-repeat rem-calc(16) rem-calc(8)
+
+	&:hover
+		border-color: darken($project-text-color, 20%)
+.header-cart-total-cost
+	float: left
+	margin-bottom: 0
+	font-family: 'Open Sans', 'Lato'
+	font-weight: 600
+	color: $project-text-color

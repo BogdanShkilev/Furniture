@@ -3,14 +3,20 @@ include pug/mixins/mixins.pug
 
 doctype html
 html
-  head(lang="en")
-    include pug/metatags.pug
-    +title('Главная')
-    include pug/styles.pug
-  body
-    include pug/svg.pug
+	head(lang="ru")
+		include pug/metatags.pug
+		+title('Главная')
+		include pug/styles.pug
+	body
+		include pug/svg.pug
+		<nav id="menu">
+			<header>
+				<h2>Menu</h2>
+			</header>
+		</nav>
 
-    //- Code here
+		.wrapper#panel
+			include pug/header.pug
 
 
-    include pug/scripts.pug
+		include pug/scripts.pug
