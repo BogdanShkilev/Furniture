@@ -32,14 +32,14 @@ $(document).ready(function() {
 			var container = $(".top-add-info");
 			if (container.has(e.target).length === 0){
 				obj.style.cssText = "max-height: 0px; \
-					opacity: 0; \
-					height: auto; \
-					pointer-events: none;";
+									opacity: 0; \
+									height: auto; \
+									pointer-events: none;";
 				button.style.cssText = 'opacity: 1; \
-								max-height: ' + mainHeight + '; \
-								pointer-events: auto;';
+										max-height: ' + mainHeight + '; \
+										pointer-events: auto;';
+				$(document).unbind();
 				}
-			$(document).unbind();
 		});
 	});
 });

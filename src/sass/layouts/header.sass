@@ -1,9 +1,3 @@
-.desktop-main-nav
-	ol
-		-moz-column-count: 2
-		-webkit-column-count: 2
-		column-count: 2
-		list-style-type: decimal
 .header-top
 	background: $project-main-color
 	border-bottom: 1px solid darken($project-main-color, 7%)
@@ -23,11 +17,14 @@
 	transition-property: max-height, opacity
 	transition-duration: 0.9s
 	pointer-events: auto;
+
+	&:hover
+		background-image: url(../images/dotes-hover.png)
 .top-add-info
 	overflow: hidden
 	height: 0
 	opacity: 0
-	max-height: 20px
+	max-height: 0
 	overflow: hidden
 	transition-property: max-height, opacity
 	transition-duration: 1s
@@ -61,7 +58,7 @@
 			display: block
 .top-add-info-list
 	float: right
-	padding: $vertical-gutter * 1.2 0
+	padding: $vertical-gutter * 1.2 rem-calc(15)
 
 	li
 		position: relative
@@ -80,42 +77,106 @@
 			display: block
 		&:first-child
 			margin-right: 0
-ol
-	display: none
 .header-nav
-	padding: $vertical-gutter * 2.5 0
 	background: linear-gradient(to top, #fefefe, #fbfbfb)
+
+	.container
+		padding: $vertical-gutter * 3.7 0
 .logo
 	display: block
+	position: relative
 	font-size: rem-calc(20)
 	font-weight: 700
 	font-family: Arial, 'Lato'
 	color: $second-project-text-color-hover
 
 	&:hover
-		color: $second-project-text-color-hover
+		color: darken($second-project-text-color-hover, 20%)
+	&:after
+		display: block
+		position: absolute
+		right: rem-calc(15)
+		top: -25%
+		height: 150%
+		width: rem-calc(1)
+		background: #e1e1e1
+		content: ''
+	@include breakpoint(medium down)
+		text-align: center!important
+		&:after
+			content: none
 
 .nav-toggle-button
+	position: absolute
+	left: rem-calc(15)
+	padding: $vertical-gutter
+	float: left
+	z-index: 10
+
+	svg
+		float: left
 	@include breakpoint(large up)
 		display: none
 
 .desktop-main-nav
 	li
 		float: left
-		margin-right: rem-calc(35)
 		font-size: rem-calc(16)
 		font-family: Arial, 'Lato'
 		font-weight: 700
-		
+
+		&:hover a[data-attr="has-drop-down"]:after
+			display: block
+			position: absolute
+			bottom: rem-calc(-6)
+			left: 50%
+			margin-left: rem-calc(-7.5)
+			width: rem-calc(15)
+			height: rem-calc(15)
+			background: #fafafa
+			border: 1px solid #ebebeb
+			transform: rotate(45deg)
+			content: ''
+		&:hover ol a:after
+			content: none
 		a
 			color: $project-text-color
-
+			position: relative
+			padding: $vertical-gutter * 4.3 rem-calc(10) $vertical-gutter * 4.9
+			
 			&:hover
 				color: darken($project-text-color, 15%)
+
+		&:hover > ol
+			display: block
+	ol
+		display: none
+		position: absolute
+		left: 0
+		top: 100%
+		padding: $vertical-gutter * 5 rem-calc(50)
+		border: 1px solid #ebebeb
+		border-top-color: rgba(235,235,235,0)
+		background: #fafafa
+		-moz-column-count: 2
+		-webkit-column-count: 2
+		column-count: 2
+		list-style-type: decimal
+
+		li
+			float: none
+			font-weight: 400
+
+			a
+				padding: 0
+
 	@media only screen and (max-width: 64.063em)
 		display: none
 .header-cart
 	display: inline-block
+	position: absolute
+	top: $vertical-gutter * 2.5
+	right: rem-calc(15)
 	overflow: hidden
 	padding: $vertical-gutter rem-calc(15) $vertical-gutter rem-calc(55)
 	border: 2px solid $project-text-color
@@ -124,6 +185,9 @@ ol
 
 	&:hover
 		border-color: darken($project-text-color, 20%)
+
+		p
+			color: darken($project-text-color, 20%)
 .header-cart-total-cost
 	float: left
 	margin-bottom: 0
