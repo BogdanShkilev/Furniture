@@ -105,7 +105,9 @@
 		text-align: center!important
 		&:after
 			content: none
-
+.slideout-menu
+	padding: $vertical-gutter * 2 0
+	background: #fafafa
 .nav-toggle-button
 	position: absolute
 	left: rem-calc(15)
@@ -142,7 +144,7 @@
 		a
 			color: $project-text-color
 			position: relative
-			padding: $vertical-gutter * 4.3 rem-calc(10) $vertical-gutter * 4.9
+			padding: $vertical-gutter rem-calc(10) $vertical-gutter * 4.9
 			
 			&:hover
 				color: darken($project-text-color, 15%)
@@ -162,6 +164,7 @@
 		-webkit-column-count: 2
 		column-count: 2
 		list-style-type: decimal
+		z-index: 100
 
 		li
 			float: none

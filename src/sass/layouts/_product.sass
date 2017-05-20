@@ -1,0 +1,70 @@
+.product-slider
+	padding: $vertical-gutter * 7 0 0
+	text-align: center
+	background: $white
+	
+
+	h3
+		display: inline-block
+		position: relative
+		margin: 0 auto $vertical-gutter * 3
+		font-weight: 700
+		font-size: rem-calc(20)
+		color: $second-project-text-color-hover
+		text-transform: uppercase
+		z-index: 10
+		
+		&:after
+			display: block
+			position: absolute
+			top: 50%
+			right: -110%
+			width: rem-calc(173)
+			height: 1px
+			background: $project-main-color
+			content: ''
+			z-index: -10
+		&:before
+			display: block
+			position: absolute
+			top: 50%
+			left: -110%
+			width: rem-calc(173)
+			height: 1px
+			background: $project-main-color
+			content: ''
+			z-index: -10
+
+.product-item
+	position: relative
+	border: 2px solid $project-main-color
+	margin: rem-calc(20)
+	padding: rem-calc(20)
+
+	img
+		margin: 0 auto
+		max-height: 100%
+		margin-bottom: $vertical-gutter * 3
+	.product-item-title
+		font-size: rem-calc(16)
+		color: $second-project-text-color-hover
+		text-transform: uppercase
+	.product-item-price
+		font-family: 'Open Sans', 'Lato', Arial
+		font-size: rem-calc(18)
+		font-weight: 700
+		color: $second-project-text-color-hover
+
+		sup
+			font-size: .6em
+	.product-item-discount
+		position: absolute
+		top: $vertical-gutter * 4
+		left: -2px
+		font-family: 'Open Sans', 'Lato', Arial
+		font-weight: 600
+		line-height: 2em
+		color: $white
+		padding: 0 rem-calc(20)
+		border-left: 2px solid #de3841
+		background: #f54d56

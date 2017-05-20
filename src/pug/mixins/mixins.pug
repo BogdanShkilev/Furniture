@@ -1,2 +1,10 @@
 include svg-icon.pug
 include title.pug
+
+mixin product-item(title,price,imageID,discount)
+	a(href="#").product-item
+		img(src=imageID)
+		h4.product-item-title #{title}
+		p.product-item-price #{price}
+			sup .00
+		span.product-item-discount=discount

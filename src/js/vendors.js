@@ -1,5 +1,5 @@
 // Foundation Core files
-// ../../bower_components/foundation-sites/dist/js/plugins/foundation.core.js
+//= ../../bower_components/foundation-sites/dist/js/plugins/foundation.core.js
 
 // Если в проекте используются встроенные js-плагины от Foundation, заменить // на //=
 
@@ -16,7 +16,7 @@
 
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.abide.js
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.accordion.js
-// ../../bower_components/foundation-sites/dist/js/plugins/foundation.accordionMenu.js
+//= ../../bower_components/foundation-sites/dist/js/plugins/foundation.accordionMenu.js
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.drilldown.js
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.dropdown.js
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.dropdownMenu.js

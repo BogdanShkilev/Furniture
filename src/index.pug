@@ -9,14 +9,26 @@ html
 		include pug/styles.pug
 	body
 		include pug/svg.pug
-		<nav id="menu">
-			<header>
-				<h2>Menu</h2>
-			</header>
-		</nav>
+		nav#menu
+			header
+				a.logo GFB
+				ul(class="vertical menu" data-accordion-menu)
+					li
+						a(href="#") Item 1
+						ul.menu.vertical.nested
+							li
+								a(href="#") Item 1A
+							li
+								a(href="#") Item 1B
+					li
+						a(href="#") Item 2
 
 		.wrapper#panel
-			include pug/header.pug
-
+			include pug/includes/header.pug
+			main.content
+				include pug/includes/banner.pug
+				include pug/includes/latest-product.pug
+				include pug/includes/recommended-product.pug
+			include pug/includes/footer.pug
 
 		include pug/scripts.pug
